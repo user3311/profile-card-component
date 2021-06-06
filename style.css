@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+:root {
+  --dark-cyan: hsl(185, 75%, 39%);
+  --dark-blue: hsl(229, 23%, 23%);
+  --dark-gray: hsl(0, 0%, 59%);
+  --blue-gray: hsl(227, 10%, 46%);
+  --blue-gray-20: hsla(229, 23%, 23%, 0.2);
+  --white: hsl(100, 100%, 100%);
+  --black-55: hsla(0, 0%, 0%, 0.55);
+
+  font-size: 18px;
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--dark-cyan);
+  color: #2e3349;
+  background-image: url(./images/bg-pattern-top.svg), url(./images/bg-pattern-bottom.svg);
+  background-position: right 50vw bottom 50vh, left 50vw top 50vh;
+  background-repeat: no-repeat, no-repeat;
+  background-size: cover, cover;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  min-height: 374px;
+  min-width: 350px;
+  background-image: url(./images/bg-pattern-card.svg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: contain;
+  box-shadow: -2px 4px 56px -12px var(--black-55);
+}
+
+img {
+  position: absolute;
+  top: calc(0px - 96px / 2);
+  left: calc(50% - 96px / 2);
+  border-radius: 50%;
+  border: 5px solid var(--white);
+}
+
+.card-content {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  text-align: center;
+  position: relative;
+  padding: 1rem;
+  background-color: var(--white);
+  margin-top: 140px;
+  flex: 1 0 auto;
+  border-radius: 0 0 15px 15px;
+}
+
+.card-content h1 {
+  margin-top: 3rem;
+  margin-bottom: 0.7rem;
+  font-size: 18px;
+}
+
+.card-content h1 > span {
+  font-weight: normal;
+  color: var(--blue-gray);
+  margin-left: 0.3rem;
+}
+
+.card-content > p {
+  font-size: 14px;
+  color: var(--blue-gray);
+  position: relative;
+}
+
+.stats {
+  position: relative;
+  margin-top: 3rem;
+}
+
+.stats::before {
+  content: "";
+  height: 1px;
+  background-color: var(--blue-gray-20);
+  width: calc(100% + 2rem);
+  position: absolute;
+  top: -1.5rem;
+  left: -1rem;
+}
+
+.stats ul {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  text-align: center;
+}
+
+.stats ul li h2 {
+  font-size: 18px;
+}
+
+.stats ul li p {
+  font-size: 11px;
+  color: var(--blue-gray);
+  margin-top: 0.3rem;
+  letter-spacing: 0.15em;
+}
+
+.attribution {
+  margin-top: 3rem;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
